@@ -2,25 +2,22 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
-console.log('🧪 MONGO_URI z .env:', process.env.MONGO_URI);
+console.log(' MONGO_URI z .env:', process.env.MONGO_URI);
 const app = express();
 const PORT = process.env.PORT || 8000;
 const User = require('./models/User');
 const jwt = require('jsonwebtoken');
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Połączenie z MongoDB
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('✅ MongoDB connected'))
-.catch(err => console.error('❌ MongoDB connection error:', err));
+.then(() => console.log(' MongoDB connected'))
+.catch(err => console.error(' MongoDB connection error:', err));
 
-// Routes
 app.use('/api/products', require('./routes/products'));
 
 app.post('/api/register', async (req, res) => {
@@ -46,8 +43,7 @@ app.post('/api/register', async (req, res) => {
       res.json({ token });
     });
 
-// Start serwera
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(` Server running on http://localhost:${PORT}`);
 });
 

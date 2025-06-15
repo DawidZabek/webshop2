@@ -20,7 +20,7 @@ function App() {
             onClick={handleLogout}
             className="absolute top-4 right-4 text-sm text-red-500 hover:text-red-700"
           >
-            🚪 Wyloguj się
+             Wyloguj się
           </button>
         )}
 

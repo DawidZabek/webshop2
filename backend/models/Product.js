@@ -4,7 +4,7 @@ const ProductSchema = new mongoose.Schema({
   title: String,
   description: String,
   image_url: String,
-  creator: String, // tymczasowo string; można zmienić na ObjectId dla użytkownika
+  creator: String,
 });
 
 module.exports = mongoose.model('Product', ProductSchema);
