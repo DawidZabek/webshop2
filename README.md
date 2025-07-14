@@ -34,3 +34,14 @@
 - MongoDB (local or MongoDB Atlas account)
 
 ---
+### Backend Setup
+
+
+
+---
+### Frontend Setup
+```
+cd frontend
+npm install
+npm start
+```
