@@ -3,6 +3,9 @@
 **Webshop2** is a full-stack web application that allows users to register, log in, and manage products. Authenticated users can add products, and admin users can delete them. Built with React and TailwindCSS on the frontend, and Node.js with Express and MongoDB on the backend.
 
 ---
+![Login/Register View](./screenshot1.png)
+![Product List and Add Product](./screenshot2.png)
+
 
 ## Features
 
@@ -35,9 +38,10 @@
 
 ---
 ### Backend Setup
-
-
-
+```
+cd backend
+node server.js
+```
 ---
 ### Frontend Setup
 ```
